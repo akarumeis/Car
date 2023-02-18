@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: grid;
+  place-items: center;
+}
+
+.car_info {}
+
+.car {
+  display: grid;
+  place-items: center;
+  margin-bottom: 100px;
+  font-size: 25px;
+}
+
+img {
+  width: 1000px;
+  display: grid;
+  place-items: center;
+  border-radius: 15%;
+  margin-bottom: 20px;
+}
+
+ul {
+  position: relative;
+  left: -350;
+}
+
+.comment {
+  margin: 10px 0 20px 0;
+  background: #DBDBDB;
+  padding: 20px 19px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px;
+  font-size: 15px;
+  min-width: 790px;
+  min-height: fit-content;
+}
+
+.comment h3 {
+  margin-bottom: 15px;
+}
+
+.text_comm {
+  margin: 0 0 20px 0;
+  background: #DBDBDB;
+  min-height: 200px;
+  width: 790px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 15px;
+  color: black;
+}
+
+
+.button_comm {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 50px;
+  padding: 5px 20px;
+  box-shadow: 0 0 10px;
+  border: 0;
+  border-radius: 20px;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.button_comm:active {
+  box-shadow: 0 0 10px lightblue;
+  background: lightblue;
+}

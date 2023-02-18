@@ -1,0 +1,72 @@
+input[type="text"],
+input[type="password"] {
+  border: 2px solid #ccc;
+  /* Товщина та колір межі */
+  border-radius: 5px;
+  /* Закругленість кутиків */
+  padding: 10px;
+  /* Відступи від тексту до межі */
+  font-size: 16px;
+  /* Розмір шрифту */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  /* Видаляємо зовнішнє виділення */
+  border-color: #007bff;
+  /* Змінюємо колір межі */
+  box-shadow: 0 0 5px #007bff;
+  /* Додаємо тінь навколо поля */
+}
+
+h1 {
+  font-size: 40px;
+  /* розмір шрифту */
+  color: #5e7bca;
+  /* колір тексту */
+  line-height: 1.5;
+  /* міжрядковий інтервал */
+  margin-bottom: 20px;
+  /* відступ від нижнього краю до наступного елементу */
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+  background-image: linear-gradient(45deg,
+      rgb(141, 141, 255),
+      rgb(193, 118, 255) 70%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  padding: 90px 0px;
+}
+
+input {
+  background-color: #007bff;
+  /* Колір фону */
+  color: #fff;
+  /* Колір тексту */
+  border: none;
+  /* Видаляємо межу */
+  border-radius: 5px;
+  /* Закругленість кутиків */
+  padding: 10px 20px;
+  /* Відступи від тексту до межі */
+  font-size: 16px;
+  /* Розмір шрифту */
+  cursor: pointer;
+  /* Змінюємо курсор при наведенні */
+}
+
+/* Стилі для фокусу на кнопці */
+input:focus {
+  outline: none;
+  /* Видаляємо зовнішнє виділення */
+  box-shadow: 0 0 5px #5da1eb;
+  /* Додаємо тінь навколо кнопки */
+  background-color: #7fb4ec;
+}

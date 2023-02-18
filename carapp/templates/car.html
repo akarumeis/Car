@@ -1,0 +1,82 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'car.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="car_info">
+            {% for car in cars %}
+            <div class="car">
+                <h3>{{car.mark_name}} | {{car.model_name}}</h3>
+                <p><img class="img" src="{{ car.img.url }}"></p>
+                <ul>
+                    <li>
+                        <p>
+                        <h5>Марка:{{car.mark_name}}</h5>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <h5>Модель:{{car.model_name}}</h5>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <h5>Год випуску:{{car.year}}</h5>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <h5>Колір:{{car.color}}</h5>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <h5>Тип топлива:{{car.fuel}}</h5>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <h5>Вага:{{car.weight}}</h5>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <h5>Ціна:{{car.price}} $</h5>
+                        </p>
+                </ul>
+            </div>
+
+            {% endfor %}
+        </div>
+
+        <!-- Коментар -->
+        <form method="post" enctype="multipart/form-data">
+            <h3>Введіть коментар</h3>
+            {% csrf_token %}
+            <p><textarea name="content" placeholder="Контент" required style="resize: none;"
+                    class="text_comm"></textarea>
+            </p>
+            <!-- <p><a href="">Увійдіть, щоб створити пост</a></p> -->
+            <p><input type="submit" class='button_comm' value="Опублікувати"></p>
+        </form>
+        {% for comment in comments %}
+        <div class="comment">
+            <h3>{{ comment.author }}</h3>
+            <p>{{ comment.text }}</p>
+        </div>
+            
+        <hr>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
